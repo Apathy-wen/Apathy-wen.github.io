@@ -250,28 +250,10 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1、什么是Redis"><a href="#1、什么是Redis" class="headerlink" title="1、什么是Redis"></a>1、什么是Redis</h4><p>REmote DIctionary Server(Redis) 是一个由 Salvatore Sanfilippo 写的 key-value 存储系统。  Redis 常被称作是一款数据结构服务器（data structure server）。Redis 的键值可以包括字符串（strings）类型，同时它还包括哈希（hashes）、列表（lists）、集合（sets）和 有序集合（sorted sets）等数据类型。 </p>
-<h4 id="2、Redis的优点"><a href="#2、Redis的优点" class="headerlink" title="2、Redis的优点"></a>2、Redis的优点</h4><ul>
-<li>性能极高：Redis 能支持超过 100K+ 每秒的读写频率。</li>
-<li>丰富的数据类型：Redis 支持二进制案例的 Strings，Lists，Hashes，Sets 及 Ordered Sets 数据类型操作。</li>
-<li>原子：Redis 的所有操作都是原子性的，同时 Redis 还支持对几个操作全并后的原子性执行。</li>
-<li>丰富的特性：Redis 还支持 publish/subscribe，通知，key 过期等等特性。</li>
-</ul>
-<h4 id="3、Redis主从复制"><a href="#3、Redis主从复制" class="headerlink" title="3、Redis主从复制"></a>3、Redis主从复制</h4><p>Redis 主从复制的过程：</p>
-<ol>
-<li>Slave 与 Master 建立连接，发送 psync 同步命令。</li>
-<li>Master 会启动一个后台进程，将数据库快照保存到文件中，同时 Master 主进程会开始收集新的写命令并缓存。</li>
-<li>后台完成保存后，就将此文件发送给 Slave。</li>
-<li>Slave 将此文件保存到磁盘上。</li>
-</ol>
-<p>Redis 主从复制特点：</p>
-<ol>
-<li>可以拥有多个 Slave。</li>
-<li>多个 Slave 可以连接同一个 Master 外，还可以连接到其它的 Slave。（当 Master 宕机后，相连的 Slave 转变为 Master）。</li>
-<li>主从复制不会阻塞 Master，在同步数据时， Master 可以继续处理 Client 请求。</li>
-<li>提高了系统的可伸缩性。</li>
-</ol>
-
+        <h4 id="1、什么是Redis"><a href="#1、什么是Redis" class="headerlink" title="1、什么是Redis"></a>1、什么是Redis</h4><p>REmote DIctionary Server(Redis) 是一个由 Salvatore Sanfilippo 写的 key-value 存储系统。  Redis 常被称作是一款数据结构服务器（data structure server）。Redis 的键值可以包括字符串（strings）类型，同时它还包括哈希（hashes）、列表（lists）、集合（sets）和 有序集合（sorted sets）等数据类型。</p>
+        
+          <a class="article-more-a" href="/2019/11/11/Redis/#more">more >></a>
+        
       
 
       
@@ -633,19 +615,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Python3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">redis</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Linux</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Python3</a>
               </li>
             
             <div class="clearfix"></div>

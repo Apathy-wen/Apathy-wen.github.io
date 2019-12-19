@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MongoDB基础操作 | Apathy-wen</title>
+  <title>Redis | Apathy-wen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、虚拟机开机配置sudo   service   mongodb   start">
-<meta name="keywords" content="MongoDB">
+  <meta name="description" content="1、什么是RedisREmote DIctionary Server(Redis) 是一个由 Salvatore Sanfilippo 写的 key-value 存储系统。  Redis 常被称作是一款数据结构服务器（data structure server）。Redis 的键值可以包括字符串（strings）类型，同时它还包括哈希（hashes）、列表（lists）、集合（sets）和 有序集">
+<meta name="keywords" content="redis">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MongoDB基础操作">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;20&#x2F;MongoDB&#x2F;index.html">
+<meta property="og:title" content="Redis">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;11&#x2F;Redis&#x2F;index.html">
 <meta property="og:site_name" content="Apathy-wen">
-<meta property="og:description" content="1、虚拟机开机配置sudo   service   mongodb   start">
+<meta property="og:description" content="1、什么是RedisREmote DIctionary Server(Redis) 是一个由 Salvatore Sanfilippo 写的 key-value 存储系统。  Redis 常被称作是一款数据结构服务器（data structure server）。Redis 的键值可以包括字符串（strings）类型，同时它还包括哈希（hashes）、列表（lists）、集合（sets）和 有序集">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-18T11:57:10.390Z">
+<meta property="og:updated_time" content="2019-12-19T03:44:32.326Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Apathy-wen" type="application/atom+xml">
@@ -153,44 +153,47 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MongoDB" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Redis" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MongoDB基础操作
+      Redis
     </h1>
   
 
         
-        <a href="/2019/11/20/MongoDB/" class="archive-article-date">
-  	<time datetime="2019-11-20T13:05:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/11/11/Redis/" class="archive-article-date">
+  	<time datetime="2019-11-11T03:56:24.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-11</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1、虚拟机开机配置"><a href="#1、虚拟机开机配置" class="headerlink" title="1、虚拟机开机配置"></a>1、虚拟机开机配置</h4><p>sudo   service   mongodb   start</p>
- <a id="more"></a> 
-
-<h4 id="2、创建、销毁数据库"><a href="#2、创建、销毁数据库" class="headerlink" title="2、创建、销毁数据库"></a>2、创建、销毁数据库</h4><p>mongo            #启动服务，进入MongoDB</p>
-<p>use   数据库名            #创建数据库</p>
-<p>db            #查看当前连接的数据库</p>
-<p>show   dbs            #查看所有数据库</p>
-<p>db.dropDatabase()            #销毁数据库</p>
-<h4 id="3、创建、删除集合"><a href="#3、创建、删除集合" class="headerlink" title="3、创建、删除集合"></a>3、创建、删除集合</h4><p>db.createCollection(“集合名”)            #创建集合</p>
-<p>show   collections            #查看创建的集合</p>
-<p>db.集合名.drop()            #删除集合</p>
-<h4 id="4、集合增、删、改、查数据"><a href="#4、集合增、删、改、查数据" class="headerlink" title="4、集合增、删、改、查数据"></a>4、集合增、删、改、查数据</h4><ul>
-<li><code>db.COLLECTION_NAME.insert(document)</code>：插入文档</li>
-<li><code>db.COLLECTION_NAME.update(SELECTION_CRITERIA,UPDATED_DATA)</code>：更新文档</li>
-<li><code>db.COLLECTION_NAME.save({_id:ObjectId(),NEW_DATA})</code>：替换已存在的文档</li>
-<li><code>db.COLLECTION_NAME.remove(DELECTION_CRITERIA)</code>：删除文档</li>
-<li><code>db.COLLECTION_NAME.find(Parameter)</code>： 查询语句 </li>
+        <h4 id="1、什么是Redis"><a href="#1、什么是Redis" class="headerlink" title="1、什么是Redis"></a>1、什么是Redis</h4><p>REmote DIctionary Server(Redis) 是一个由 Salvatore Sanfilippo 写的 key-value 存储系统。  Redis 常被称作是一款数据结构服务器（data structure server）。Redis 的键值可以包括字符串（strings）类型，同时它还包括哈希（hashes）、列表（lists）、集合（sets）和 有序集合（sorted sets）等数据类型。 </p>
+<h4 id="2、Redis的优点"><a href="#2、Redis的优点" class="headerlink" title="2、Redis的优点"></a>2、Redis的优点</h4><ul>
+<li>性能极高：Redis 能支持超过 100K+ 每秒的读写频率。</li>
+<li>丰富的数据类型：Redis 支持二进制案例的 Strings，Lists，Hashes，Sets 及 Ordered Sets 数据类型操作。</li>
+<li>原子：Redis 的所有操作都是原子性的，同时 Redis 还支持对几个操作全并后的原子性执行。</li>
+<li>丰富的特性：Redis 还支持 publish/subscribe，通知，key 过期等等特性。</li>
 </ul>
+<h4 id="3、Redis主从复制"><a href="#3、Redis主从复制" class="headerlink" title="3、Redis主从复制"></a>3、Redis主从复制</h4><p>Redis 主从复制的过程：</p>
+<ol>
+<li>Slave 与 Master 建立连接，发送 psync 同步命令。</li>
+<li>Master 会启动一个后台进程，将数据库快照保存到文件中，同时 Master 主进程会开始收集新的写命令并缓存。</li>
+<li>后台完成保存后，就将此文件发送给 Slave。</li>
+<li>Slave 将此文件保存到磁盘上。</li>
+</ol>
+<p>Redis 主从复制特点：</p>
+<ol>
+<li>可以拥有多个 Slave。</li>
+<li>多个 Slave 可以连接同一个 Master 外，还可以连接到其它的 Slave。（当 Master 宕机后，相连的 Slave 转变为 Master）。</li>
+<li>主从复制不会阻塞 Master，在同步数据时， Master 可以继续处理 Client 请求。</li>
+<li>提高了系统的可伸缩性。</li>
+</ol>
 
       
 
@@ -230,7 +233,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">MongoDB</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">redis</a>
         		</li>
       		
 		</ul>
@@ -286,7 +289,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=	http://yoursite.com/2019/11/20/MongoDB/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=	http://yoursite.com/2019/11/11/Redis/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -300,9 +303,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/11/20/MongoDB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          MongoDB基础操作
+        
+      </div>
+    </a>
   
-    <a href="/2019/11/11/Redis/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Redis</div>
+  
+    <a href="/2019/08/09/Linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux下Python3源码安装</div>
       <i class="icon-circle-right"></i>
     </a>
 	<span id="busuanzi_container_page_pv">
@@ -332,7 +344,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、虚拟机开机配置"><span class="toc-number">1.</span> <span class="toc-text">1、虚拟机开机配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、创建、销毁数据库"><span class="toc-number">2.</span> <span class="toc-text">2、创建、销毁数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、创建、删除集合"><span class="toc-number">3.</span> <span class="toc-text">3、创建、删除集合</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、集合增、删、改、查数据"><span class="toc-number">4.</span> <span class="toc-text">4、集合增、删、改、查数据</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、什么是Redis"><span class="toc-number">1.</span> <span class="toc-text">1、什么是Redis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、Redis的优点"><span class="toc-number">2.</span> <span class="toc-text">2、Redis的优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、Redis主从复制"><span class="toc-number">3.</span> <span class="toc-text">3、Redis主从复制</span></a></li></ol>
                     </div>
                 </span>
             </div>

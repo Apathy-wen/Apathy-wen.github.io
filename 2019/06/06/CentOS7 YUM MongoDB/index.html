@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Apathy-wen">
 <meta property="og:description" content="MongoDB特点 模式自由 :可以把不同结构的文档存储在同一个数据库里 面向集合的存储：适合存储 JSON风格文件的形式 完整的索引支持：对任何属性可索引 复制和高可用性：支持服务器之间的数据复制，支持主-从模式及服务器之间的相互复制。复制的主要目的是提供冗余及自动故障转移 自动分片：支持云级别的伸缩性：自动分片功能支持水平的数据库集群，可动态添加额外的机器 丰富的查询：支持丰富的查询表达方式，">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-20T12:43:46.999Z">
+<meta property="og:updated_time" content="2019-12-20T12:48:07.069Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Apathy-wen" type="application/atom+xml">
@@ -185,9 +185,10 @@
 </ul>
 <h4 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h4><h5 id="1-配置MongoDB的yum源"><a href="#1-配置MongoDB的yum源" class="headerlink" title="1.配置MongoDB的yum源"></a><strong>1.配置MongoDB的yum源</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.repos.d/mongodb-org-4.0.repo</span><br><span class="line">#添加以下内容：</span><br><span class="line">[mongodb-org-4.0]</span><br><span class="line">name=MongoDB Repository</span><br><span class="line">baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.0/x86_64/</span><br><span class="line">gpgcheck=0</span><br><span class="line">enabled=1</span><br><span class="line">gpgkey=https://www.mongodb.org/static/pgp/server-4.0.asc</span><br><span class="line"></span><br><span class="line">#这里可以修改 gpgcheck=0, 省去gpg验证</span><br><span class="line">[root@localhost ~]# yum makecache</span><br></pre></td></tr></table></figure>
 
-<h5 id="2-安装MongoDB"><a href="#2-安装MongoDB" class="headerlink" title="2.安装MongoDB"></a>2.安装MongoDB</h5><p><code>yum   -y    install   mongodb-org            #安装命令</code></p>
-<p><code>whereis   mongod            #查看MongoDB安装位置</code></p>
-<p><code>vim   /etc/mongod.conf        #查看修改配置文件</code></p>
+<h5 id="2-安装MongoDB"><a href="#2-安装MongoDB" class="headerlink" title="2.安装MongoDB"></a>2.安装MongoDB</h5><p>`</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">yum   -y    install   mongodb-org			#安装命令`</span><br><span class="line"></span><br><span class="line">`whereis   mongod			#查看MongoDB安装位置`</span><br><span class="line"></span><br><span class="line">`vim   /etc/mongod.conf		#查看修改配置文件</span><br></pre></td></tr></table></figure>
+
+<p>`</p>
 <h5 id="3-启动MongoDB"><a href="#3-启动MongoDB" class="headerlink" title="3.启动MongoDB"></a>3.启动MongoDB</h5><p><code>systemctl   start   mongod.service            #启动MongoDB</code></p>
 <p><code>systemctl   stop   mongod.service            #查询MongoDB状态</code></p>
 <p>``</p>
@@ -462,15 +463,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">redis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Linux</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Python3</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -479,6 +472,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">CentOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Python3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">redis</a>
               </li>
             
             <div class="clearfix"></div>

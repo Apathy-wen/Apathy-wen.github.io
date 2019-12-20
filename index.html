@@ -407,41 +407,24 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="MongoDB特点"><a href="#MongoDB特点" class="headerlink" title="MongoDB特点"></a>MongoDB特点</h3><ul>
-<li>模式自由 :可以把不同结构的文档存储在同一个数据库里</li>
-<li>面向集合的存储：适合存储 JSON风格文件的形式</li>
-<li>完整的索引支持：对任何属性可索引</li>
-<li>复制和高可用性：支持服务器之间的数据复制，支持主-从模式及服务器之间的相互复制。复制的主要目的是提供冗余及自动故障转移</li>
-<li>自动分片：支持云级别的伸缩性：自动分片功能支持水平的数据库集群，可动态添加额外的机器</li>
-<li>丰富的查询：支持丰富的查询表达方式，查询指令使用JSON形式的标记，可轻易查询文档中的内嵌的对象及数组</li>
-<li>快速就地更新：查询优化器会分析查询表达式，并生成一个高效的查询计划</li>
-<li>高效的传统存储方式：支持二进制数据及大型对象（如照片或图片）</li>
-</ul>
-<h3 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a>安装步骤</h3><h4 id="1-配置MongoDB的yum源"><a href="#1-配置MongoDB的yum源" class="headerlink" title="1.配置MongoDB的yum源"></a><strong>1.配置MongoDB的yum源</strong></h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/yum.repos.d/mongodb-org-4.0.repo</span><br><span class="line">#添加以下内容：</span><br><span class="line">[mongodb-org-4.0]</span><br><span class="line">name=MongoDB Repository</span><br><span class="line">baseurl=https://repo.mongodb.org/yum/redhat/$releasever/mongodb-org/4.0/x86_64/</span><br><span class="line">gpgcheck=0</span><br><span class="line">enabled=1</span><br><span class="line">gpgkey=https://www.mongodb.org/static/pgp/server-4.0.asc</span><br><span class="line"></span><br><span class="line">#这里可以修改 gpgcheck=0, 省去gpg验证</span><br><span class="line">[root@localhost ~]# yum makecache</span><br></pre></td></tr></table></figure>
-
-<h4 id="2-安装MongoDB"><a href="#2-安装MongoDB" class="headerlink" title="2.安装MongoDB"></a>2.安装MongoDB</h4><h5 id="安装命令："><a href="#安装命令：" class="headerlink" title="安装命令："></a><strong>安装命令：</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum -y install mongodb-org</span><br></pre></td></tr></table></figure>
-
-<p>安装完成后</p>
-<h5 id="查看mongo安装位置"><a href="#查看mongo安装位置" class="headerlink" title="查看mongo安装位置 :"></a><strong>查看mongo安装位置 :</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">whereis mongod</span><br></pre></td></tr></table></figure>
-
-<h5 id="查看修改配置文件-："><a href="#查看修改配置文件-：" class="headerlink" title="查看修改配置文件 ："></a><strong>查看修改配置文件 ：</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/mongod.conf</span><br></pre></td></tr></table></figure>
-
-<h4 id="3-启动MongoDB"><a href="#3-启动MongoDB" class="headerlink" title="3.启动MongoDB"></a>3.启动MongoDB</h4><h5 id="启动mongodb-："><a href="#启动mongodb-：" class="headerlink" title="启动mongodb ："></a><strong>启动mongodb ：</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl start mongod.service</span><br></pre></td></tr></table></figure>
-
-<h5 id="停止mongodb-："><a href="#停止mongodb-：" class="headerlink" title="停止mongodb ："></a><strong>停止mongodb ：</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop mongod.service</span><br></pre></td></tr></table></figure>
-
-<h5 id="查到mongodb的状态："><a href="#查到mongodb的状态：" class="headerlink" title="查到mongodb的状态："></a><strong>查到mongodb的状态：</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl status mongod.service</span><br></pre></td></tr></table></figure>
-
-<h4 id="4-外网访问需要关闭防火墙"><a href="#4-外网访问需要关闭防火墙" class="headerlink" title="4.外网访问需要关闭防火墙"></a>4.外网访问需要关闭防火墙</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">关闭firewall：</span><br><span class="line"></span><br><span class="line">systemctl stop firewalld.service #停止firewall</span><br><span class="line">systemctl disable firewalld.service #禁止firewall开机启动</span><br></pre></td></tr></table></figure>
-
-<h4 id="5-启动Mongo-shell"><a href="#5-启动Mongo-shell" class="headerlink" title="5.启动Mongo shell"></a><strong>5.启动Mongo shell</strong></h4><h5 id="命令："><a href="#命令：" class="headerlink" title="命令："></a><strong>命令：</strong></h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo</span><br></pre></td></tr></table></figure>
-
-<h5 id="查看数据库："><a href="#查看数据库：" class="headerlink" title="查看数据库："></a>查看数据库：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show dbs</span><br></pre></td></tr></table></figure>
-
-<h5 id="编辑mongod-conf注释bindIp-并重启mongodb-这句配置代表只能本机使用，所以需注释-或者-设置为-0-0-0-0"><a href="#编辑mongod-conf注释bindIp-并重启mongodb-这句配置代表只能本机使用，所以需注释-或者-设置为-0-0-0-0" class="headerlink" title="编辑mongod.conf注释bindIp,并重启mongodb.(这句配置代表只能本机使用，所以需注释) 或者 设置为 0.0.0.0"></a>编辑mongod.conf注释<strong>bindIp</strong>,并重启mongodb.(这句配置代表只能本机使用，所以需注释) 或者 设置为 0.0.0.0</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/mongod.conf</span><br></pre></td></tr></table></figure>
-
-<h5 id="重启mongodb使修改生效："><a href="#重启mongodb使修改生效：" class="headerlink" title="重启mongodb使修改生效："></a>重启mongodb使修改生效：</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mongod.service</span><br></pre></td></tr></table></figure>
-
-<h5 id="到这里就可以正常使用mongodb了"><a href="#到这里就可以正常使用mongodb了" class="headerlink" title="到这里就可以正常使用mongodb了"></a><strong>到这里就可以正常使用mongodb了</strong></h5>
+<li><p>模式自由 :可以把不同结构的文档存储在同一个数据库里</p>
+</li>
+<li><p>面向集合的存储：适合存储 JSON风格文件的形式</p>
+</li>
+<li><p>完整的索引支持：对任何属性可索引</p>
+</li>
+<li><p>复制和高可用性：支持服务器之间的数据复制，支持主-从模式及服务器之间的相互复制。复制的主要目的是提供冗余及自动故障转移</p>
+</li>
+<li><p>自动分片：支持云级别的伸缩性：自动分片功能支持水平的数据库集群，可动态添加额外的机器</p>
+</li>
+<li><p>丰富的查询：支持丰富的查询表达方式，查询指令使用JSON形式的标记，可轻易查询文档中的内嵌的对象及数组</p>
+</li>
+<li><p>快速就地更新：查询优化器会分析查询表达式，并生成一个高效的查询计划</p>
+</li>
+<li><p>高效的传统存储方式：支持二进制数据及大型对象（如照片或图片）</p>
+        
+          <a class="article-more-a" href="/2019/06/06/CentOS7%20YUM%20MongoDB/#more">more >></a>
+        
       
 
       
@@ -735,15 +718,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Python3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">CentOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Python3</a>
               </li>
              
               <li class="article-tag-list-item">

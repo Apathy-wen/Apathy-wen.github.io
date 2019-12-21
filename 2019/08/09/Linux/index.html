@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Linux下Python3源码安装 | Apathy-wen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.下载wget https:&#x2F;&#x2F;www.python.org&#x2F;ftp&#x2F;python&#x2F;3.7.4&#x2F;Python-3.7.4.tgz">
+  <meta name="description" content="1.下载1wget https:&#x2F;&#x2F;www.python.org&#x2F;ftp&#x2F;python&#x2F;3.7.4&#x2F;Python-3.7.4.tgz">
 <meta name="keywords" content="Linux,Python3">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Linux下Python3源码安装">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;08&#x2F;09&#x2F;Linux&#x2F;index.html">
 <meta property="og:site_name" content="Apathy-wen">
-<meta property="og:description" content="1.下载wget https:&#x2F;&#x2F;www.python.org&#x2F;ftp&#x2F;python&#x2F;3.7.4&#x2F;Python-3.7.4.tgz">
+<meta property="og:description" content="1.下载1wget https:&#x2F;&#x2F;www.python.org&#x2F;ftp&#x2F;python&#x2F;3.7.4&#x2F;Python-3.7.4.tgz">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-18T09:24:45.645Z">
+<meta property="og:updated_time" content="2019-12-21T00:39:15.789Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Apathy-wen" type="application/atom+xml">
@@ -173,17 +173,33 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h4><p>wget <a href="https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz" target="_blank" rel="noopener">https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz</a></p>
+        <h4 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.python.org/ftp/python/3.7.4/Python-3.7.4.tgz</span><br></pre></td></tr></table></figure>
+
  <a id="more"></a> 
 
-<h4 id="2-解压"><a href="#2-解压" class="headerlink" title="2.解压"></a>2.解压</h4><p>tar -xzvf Python-3.7.4.tgz</p>
-<h4 id="3-config"><a href="#3-config" class="headerlink" title="3.config"></a>3.config</h4><p>mkdir -p /usr/local/python3<br>./configure –prefix=/usr/local/python3/</p>
-<h4 id="4-编译"><a href="#4-编译" class="headerlink" title="4. 编译"></a>4. 编译</h4><p>make </p>
-<h4 id="5-安装"><a href="#5-安装" class="headerlink" title="5.安装"></a>5.安装</h4><p>make install </p>
-<h4 id="6-创建快捷方式"><a href="#6-创建快捷方式" class="headerlink" title="6.创建快捷方式"></a>6.创建快捷方式</h4><p>ln -s /usr/local/python3/bin/python3 /usr/bin/python3<br>ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3</p>
-<h4 id="7-更新pip3"><a href="#7-更新pip3" class="headerlink" title="7.更新pip3"></a>7.更新pip3</h4><p>pip3 install –upgrade pip</p>
-<h4 id="8-环境变量中添加-usr-local-python3"><a href="#8-环境变量中添加-usr-local-python3" class="headerlink" title="8.环境变量中添加/usr/local/python3"></a>8.环境变量中添加/usr/local/python3</h4><p>vi .bash_profile<br>修改<br>PATH=$PATH:$HOME/bin:/usr/local/python3/bin</p>
-<h4 id="9-退出编辑，激活配置"><a href="#9-退出编辑，激活配置" class="headerlink" title="9.退出编辑，激活配置"></a>9.退出编辑，激活配置</h4><p>source .bash_profile</p>
+<h4 id="2-解压"><a href="#2-解压" class="headerlink" title="2.解压"></a>2.解压</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf Python-3.7.4.tgz</span><br></pre></td></tr></table></figure>
+
+<h4 id="3-config"><a href="#3-config" class="headerlink" title="3.config"></a>3.config</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p /usr/local/python3</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./configure --prefix=/usr/local/python3/</span><br></pre></td></tr></table></figure>
+
+<h4 id="4-编译"><a href="#4-编译" class="headerlink" title="4. 编译"></a>4. 编译</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
+
+<h4 id="5-安装"><a href="#5-安装" class="headerlink" title="5.安装"></a>5.安装</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make install</span><br></pre></td></tr></table></figure>
+
+<h4 id="6-创建快捷方式"><a href="#6-创建快捷方式" class="headerlink" title="6.创建快捷方式"></a>6.创建快捷方式</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/python3 /usr/bin/python3</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln -s /usr/local/python3/bin/pip3 /usr/bin/pip3</span><br></pre></td></tr></table></figure>
+
+<h4 id="7-更新pip3"><a href="#7-更新pip3" class="headerlink" title="7.更新pip3"></a>7.更新pip3</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip3 install --upgrade pip</span><br></pre></td></tr></table></figure>
+
+<h4 id="8-环境变量中添加-usr-local-python3"><a href="#8-环境变量中添加-usr-local-python3" class="headerlink" title="8.环境变量中添加/usr/local/python3"></a>8.环境变量中添加/usr/local/python3</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi .bash_profile</span><br></pre></td></tr></table></figure>
+
+<p>修改</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">PATH=$PATH:$HOME/bin:/usr/local/python3/bin</span><br></pre></td></tr></table></figure>
+
+<h4 id="9-退出编辑，激活配置"><a href="#9-退出编辑，激活配置" class="headerlink" title="9.退出编辑，激活配置"></a>9.退出编辑，激活配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source .bash_profile</span><br></pre></td></tr></table></figure>
+
 
       
 
@@ -455,15 +471,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Python3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">CentOS</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Python3</a>
               </li>
              
               <li class="article-tag-list-item">

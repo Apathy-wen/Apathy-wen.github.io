@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Apathy-wen">
 <meta property="og:description" content="常用快捷命令   按键 作用    Tab 补全   Ctrl+l 清屏，类似clear命令   Ctrl+r（history） 查找历史命令   Ctrl+u 删除此处至开始所有内容   Ctrl+d 键盘输入结束或退出终端   Ctrl+s 暂停当前程序，暂停后按下任意键恢复运行   Ctrl+z 将当前程序放到后台运行，恢复到前台为命令fg   Ctrl+a 将光标移至输入行头，相当于Hom">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-18T09:04:47.543Z">
+<meta property="og:updated_time" content="2019-12-21T01:34:10.740Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Apathy-wen" type="application/atom+xml">
@@ -65,7 +65,7 @@
 			</ul>
 		</nav>
 		<nav>
-			总文章数 5
+			总文章数 6
 		</nav>
 		
 		<nav class="header-smart-menu">
@@ -235,40 +235,171 @@
 </tbody></table>
  <a id="more"></a> 
 
-<h4 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h4><h5 id="1、新建"><a href="#1、新建" class="headerlink" title="1、新建"></a>1、新建</h5><p>touch   文件名        #新建空白文件</p>
-<p>mkdir   文件夹        #新建文件夹</p>
-<p>mkdir -p test/a/b         #在test目录下的a目录下创建一个b目录，如果上一级目录不存在，则连它的父目录一起创建</p>
-<h5 id="2、复制"><a href="#2、复制" class="headerlink" title="2、复制"></a>2、复制</h5><p>cp   test   father/son/grandson         #复制文件到指定目录</p>
-<p>cd   /home/shiyanlou        #进入目录</p>
-<p>mkdir   family             #创建文件夹</p>
-<p>cp  -r   father   family         #复制目录</p>
-<h5 id="3、删除"><a href="#3、删除" class="headerlink" title="3、删除"></a>3、删除</h5><p>rm   文件名        #删除文件</p>
-<p>rm   -f    文件名        #强制删除</p>
-<p>rm    -f   文件夹        #删除目录</p>
-<p>rmdir   test             #删除当前目录下的test目录（注意：该命令只能够删除空目录）</p>
-<p>rm   -r   test             #递归删除，即删除test目录以及其目录下的子目录（带询问的删除）</p>
-<p>rm   -rf   test             #直接删除test目录以及其目录下的子目录</p>
-<h5 id="4、移动文件与文件重命名"><a href="#4、移动文件与文件重命名" class="headerlink" title="4、移动文件与文件重命名"></a>4、移动文件与文件重命名</h5><p>mv   文件   文件夹        #移动文件</p>
-<p>mv    旧文件名    新文件名        #重命名文件</p>
-<h5 id="5、展示目录列表"><a href="#5、展示目录列表" class="headerlink" title="5、展示目录列表"></a>5、展示目录列表</h5><p> ls                #展示当前目录下的可见文件</p>
-<p> ls -a        #展示当前目录下所有的文件（包括隐藏的文件）</p>
-<p> ls -l(ll)        #展示当前目录下文件的详细信息</p>
-<p> ll -a             #展示当前目录下所有文件的详细信息</p>
-<p> ll -h            #友好的显示当前目录下文件的详细信息（其实就是文件的大小可读性更强了）</p>
-<p>pwd            #显示当前的目录</p>
-<h5 id="6、切换目录命令"><a href="#6、切换目录命令" class="headerlink" title="6、切换目录命令"></a>6、切换目录命令</h5><p> cd test            #切换到test目录下</p>
-<p> cd ..            #切换到上一级目录</p>
-<p> cd /            #切换到系统根目录下</p>
-<p> cd ~            #切换到当前用户的根目录下</p>
-<p> cd -            #切换到上一级所在的目录</p>
-<h5 id="7、Linux-文件内容查看"><a href="#7、Linux-文件内容查看" class="headerlink" title="7、Linux 文件内容查看"></a>7、Linux 文件内容查看</h5><p>cat            #由第一行开始显示文件内容</p>
-<p>tac            #从最后一行开始显示，可以看出 tac 是 cat 的倒著写</p>
-<p>nl            #显示的时候，顺道输出行号</p>
-<p>more            #一页一页的显示文件内容</p>
-<p>less            #与 more 类似，但是比 more 更好的是，他可以往前翻页</p>
-<p>head            #只看头几行</p>
-<p>tail            #只看尾巴几行</p>
+<h4 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h4><h5 id="1、新建"><a href="#1、新建" class="headerlink" title="1、新建"></a>1、新建</h5><ul>
+<li>新建空白文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch   文件名</span><br></pre></td></tr></table></figure>
 
+<ul>
+<li>新建文件夹</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir   文件夹</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>在test目录下的a目录下创建一个b目录，如果上一级目录不存在，则连它的父目录一起创建</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p test/a/b</span><br></pre></td></tr></table></figure>
+
+<h5 id="2、复制"><a href="#2、复制" class="headerlink" title="2、复制"></a>2、复制</h5><ul>
+<li>复制文件到指定目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp   test   father/son/grandson</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>进入目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd   /home/shiyanlou</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建文件夹</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir   family</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>复制目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp  -r   father   family</span><br></pre></td></tr></table></figure>
+
+<h5 id="3、删除"><a href="#3、删除" class="headerlink" title="3、删除"></a>3、删除</h5><ul>
+<li>删除文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm   文件名</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>强制删除</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm   -f    文件名</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm    -f   文件夹</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>删除当前目录下的test目录（注意：该命令只能够删除空目录）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rmdir   test</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>递归删除，即删除test目录以及其目录下的子目录（带询问的删除）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm   -r   test</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>直接删除test目录以及其目录下的子目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm   -rf   test</span><br></pre></td></tr></table></figure>
+
+<h5 id="4、移动文件与文件重命名"><a href="#4、移动文件与文件重命名" class="headerlink" title="4、移动文件与文件重命名"></a>4、移动文件与文件重命名</h5><ul>
+<li>移动文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv   文件   文件夹</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>重命名文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mv    旧文件名    新文件名</span><br></pre></td></tr></table></figure>
+
+<h5 id="5、展示目录列表"><a href="#5、展示目录列表" class="headerlink" title="5、展示目录列表"></a>5、展示目录列表</h5><ul>
+<li>展示当前目录下的可见文件</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>展示当前目录下所有的文件（包括隐藏的文件）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -a</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>展示当前目录下文件的详细信息</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ls -l(ll)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>展示当前目录下所有文件的详细信息</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll -a</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>友好的显示当前目录下文件的详细信息（其实就是文件的大小可读性更强了）</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ll -h</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>显示当前的目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pwd</span><br></pre></td></tr></table></figure>
+
+<h5 id="6、切换目录命令"><a href="#6、切换目录命令" class="headerlink" title="6、切换目录命令"></a>6、切换目录命令</h5><ul>
+<li>切换到test目录下</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd test</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>切换到上一级目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ..</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>切换到系统根目录下</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd /</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>切换到当前用户的根目录下</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd ~</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>切换到上一级所在的目录</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd -</span><br></pre></td></tr></table></figure>
+
+<p>7、Linux 文件内容查看</p>
+<ul>
+<li>由第一行开始显示文件内容</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>从最后一行开始显示，可以看出 tac 是 cat 的倒著写</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tac</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>显示的时候，顺道输出行号</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nl</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>一页一页的显示文件内容</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">more</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>与 more 类似，但是比 more 更好的是，他可以往前翻页</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">less</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>只看头几行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">head</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>只看尾巴几行</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tail</span><br></pre></td></tr></table></figure>
       
 
       
@@ -377,11 +508,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/06/06/CentOS7%20YUM%20MongoDB/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/05/19/Linux%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          CentOS7   YUM   安装MongoDB
+          Linux基本操作
         
       </div>
     </a>
@@ -410,7 +541,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#常用快捷命令"><span class="toc-number">1.</span> <span class="toc-text">常用快捷命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基本操作"><span class="toc-number">2.</span> <span class="toc-text">基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、新建"><span class="toc-number">2.1.</span> <span class="toc-text">1、新建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、复制"><span class="toc-number">2.2.</span> <span class="toc-text">2、复制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3、删除"><span class="toc-number">2.3.</span> <span class="toc-text">3、删除</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4、移动文件与文件重命名"><span class="toc-number">2.4.</span> <span class="toc-text">4、移动文件与文件重命名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5、展示目录列表"><span class="toc-number">2.5.</span> <span class="toc-text">5、展示目录列表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6、切换目录命令"><span class="toc-number">2.6.</span> <span class="toc-text">6、切换目录命令</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#7、Linux-文件内容查看"><span class="toc-number">2.7.</span> <span class="toc-text">7、Linux 文件内容查看</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#常用快捷命令"><span class="toc-number">1.</span> <span class="toc-text">常用快捷命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#基本操作"><span class="toc-number">2.</span> <span class="toc-text">基本操作</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1、新建"><span class="toc-number">2.1.</span> <span class="toc-text">1、新建</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2、复制"><span class="toc-number">2.2.</span> <span class="toc-text">2、复制</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3、删除"><span class="toc-number">2.3.</span> <span class="toc-text">3、删除</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#4、移动文件与文件重命名"><span class="toc-number">2.4.</span> <span class="toc-text">4、移动文件与文件重命名</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#5、展示目录列表"><span class="toc-number">2.5.</span> <span class="toc-text">5、展示目录列表</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#6、切换目录命令"><span class="toc-number">2.6.</span> <span class="toc-text">6、切换目录命令</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>

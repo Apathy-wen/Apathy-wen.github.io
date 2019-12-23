@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="Apathy-wen">
 <meta property="og:description" content="1、什么是RedisREmote DIctionary Server(Redis) 是一个由 Salvatore Sanfilippo 写的 key-value 存储系统。  Redis 常被称作是一款数据结构服务器（data structure server）。Redis 的键值可以包括字符串（strings）类型，同时它还包括哈希（hashes）、列表（lists）、集合（sets）和 有序集">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-21T01:03:31.505Z">
+<meta property="og:updated_time" content="2019-12-23T12:08:57.295Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Apathy-wen" type="application/atom+xml">
@@ -173,23 +173,19 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1、什么是Redis"><a href="#1、什么是Redis" class="headerlink" title="1、什么是Redis"></a>1、什么是Redis</h4><p>REmote DIctionary Server(Redis) 是一个由 Salvatore Sanfilippo 写的 key-value 存储系统。  Redis 常被称作是一款数据结构服务器（data structure server）。Redis 的键值可以包括字符串（strings）类型，同时它还包括哈希（hashes）、列表（lists）、集合（sets）和 有序集合（sorted sets）等数据类型。</p>
+        <h3 id="1、什么是Redis"><a href="#1、什么是Redis" class="headerlink" title="1、什么是Redis"></a>1、什么是Redis</h3><p>REmote DIctionary Server(Redis) 是一个由 Salvatore Sanfilippo 写的 key-value 存储系统。  Redis 常被称作是一款数据结构服务器（data structure server）。Redis 的键值可以包括字符串（strings）类型，同时它还包括哈希（hashes）、列表（lists）、集合（sets）和 有序集合（sorted sets）等数据类型。</p>
  <a id="more"></a>  
 
-<h4 id="2、Redis安装"><a href="#2、Redis安装" class="headerlink" title="2、Redis安装"></a>2、Redis安装</h4><ul>
-<li><p>下载</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://labfile.oss.aliyuncs.com/courses/106/redis-4.0.9.tar.gz</span><br></pre></td></tr></table></figure>
+<h3 id="2、Redis安装"><a href="#2、Redis安装" class="headerlink" title="2、Redis安装"></a>2、Redis安装</h3><ul>
+<li><h4 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget http://labfile.oss.aliyuncs.com/courses/106/redis-4.0.9.tar.gz</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>解压</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf redis-4.0.9.tar.gz</span><br></pre></td></tr></table></figure>
+<li><h4 id="解压"><a href="#解压" class="headerlink" title="解压"></a>解压</h4> <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tar -xzvf redis-4.0.9.tar.gz</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>编译</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd redis-4.0.9</span><br></pre></td></tr></table></figure>
+<li><h4 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd redis-4.0.9</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">make</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>查看重要文件    ls</p>
-<ul>
+<li><h4 id="查看重要文件-ls"><a href="#查看重要文件-ls" class="headerlink" title="查看重要文件    ls"></a>查看重要文件    ls</h4><ul>
 <li><p>服务端：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">src/redis-server</span><br></pre></td></tr></table></figure>
 </li>
@@ -201,13 +197,11 @@
 </li>
 </ul>
 </li>
-<li><p>配置环境变量</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp redis-server /usr/local/bin/</span><br></pre></td></tr></table></figure>
+<li><h4 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp redis-server /usr/local/bin/</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cp redis-cli /usr/local/bin/</span><br></pre></td></tr></table></figure>
 </li>
-<li><p>启动</p>
-<p>启动redis-server（服务端）</p>
+<li><h4 id="启动"><a href="#启动" class="headerlink" title="启动"></a>启动</h4><p>启动redis-server（服务端）</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">redis-server</span><br></pre></td></tr></table></figure>
 
 <p>查看redis</p>
@@ -224,13 +218,13 @@
 
 </li>
 </ul>
-<h4 id="3、Redis的优点"><a href="#3、Redis的优点" class="headerlink" title="3、Redis的优点"></a>3、Redis的优点</h4><ul>
+<h3 id="3、Redis的优点"><a href="#3、Redis的优点" class="headerlink" title="3、Redis的优点"></a>3、Redis的优点</h3><ul>
 <li>性能极高：Redis 能支持超过 100K+ 每秒的读写频率。</li>
 <li>丰富的数据类型：Redis 支持二进制案例的 Strings，Lists，Hashes，Sets 及 Ordered Sets 数据类型操作。</li>
 <li>原子：Redis 的所有操作都是原子性的，同时 Redis 还支持对几个操作全并后的原子性执行。</li>
 <li>丰富的特性：Redis 还支持 publish/subscribe，通知，key 过期等等特性。</li>
 </ul>
-<h4 id="4、常用命令"><a href="#4、常用命令" class="headerlink" title="4、常用命令"></a>4、常用命令</h4><ul>
+<h3 id="4、常用命令"><a href="#4、常用命令" class="headerlink" title="4、常用命令"></a>4、常用命令</h3><ul>
 <li><h4 id="exists-and-del"><a href="#exists-and-del" class="headerlink" title="exists   and   del"></a>exists   and   del</h4><ul>
 <li><p><code>exists</code> key：判断一个 key 是否存在，存在返回 1，否则返回 0。</p>
 </li>
@@ -265,26 +259,24 @@
 </ul>
 </li>
 </ul>
-<h4 id="5、Redis时间相关命令"><a href="#5、Redis时间相关命令" class="headerlink" title="5、Redis时间相关命令"></a>5、Redis时间相关命令</h4><ul>
-<li><h5 id="限定-key-生存时间"><a href="#限定-key-生存时间" class="headerlink" title="限定 key 生存时间"></a>限定 key 生存时间</h5><p> <code>expire</code>：设置某个 key 的过期时间（秒） </p>
+<h3 id="5、Redis时间相关命令"><a href="#5、Redis时间相关命令" class="headerlink" title="5、Redis时间相关命令"></a>5、Redis时间相关命令</h3><ul>
+<li><h4 id="限定-key-生存时间"><a href="#限定-key-生存时间" class="headerlink" title="限定 key 生存时间"></a>限定 key 生存时间</h4><p> <code>expire</code>：设置某个 key 的过期时间（秒） </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; set key some-value</span><br><span class="line">&gt; expire key 10</span><br><span class="line">&gt; get key     # 马上执行此命令</span><br><span class="line">&gt; get key     # 10s后执行此命令</span><br></pre></td></tr></table></figure>
 </li>
-<li><h5 id="查询-key-剩余生存时间"><a href="#查询-key-剩余生存时间" class="headerlink" title="查询 key 剩余生存时间"></a>查询 key 剩余生存时间</h5><p> <code>ttl</code>：查找某个 key 还有多长时间过期，返回时间单位为秒。 </p>
+<li><h4 id="查询-key-剩余生存时间"><a href="#查询-key-剩余生存时间" class="headerlink" title="查询 key 剩余生存时间"></a>查询 key 剩余生存时间</h4><p> <code>ttl</code>：查找某个 key 还有多长时间过期，返回时间单位为秒。 </p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&gt; set key 100 ex 30</span><br><span class="line">&gt; ttl key</span><br><span class="line">&gt; ttl key</span><br></pre></td></tr></table></figure>
 </li>
-<li><h5 id="清除-key"><a href="#清除-key" class="headerlink" title="清除 key"></a>清除 key</h5><p><code>flushdb</code>：清空当前数据库中的所有键。</p>
+<li><h4 id="清除-key"><a href="#清除-key" class="headerlink" title="清除 key"></a>清除 key</h4><p><code>flushdb</code>：清空当前数据库中的所有键。</p>
 <p><code>flushall</code>：清空所有数据库中的所有键。</p>
 </li>
 </ul>
-<h4 id="6、Redis主从复制"><a href="#6、Redis主从复制" class="headerlink" title="6、Redis主从复制"></a>6、Redis主从复制</h4><p>Redis 主从复制的过程：</p>
-<ol>
+<h3 id="6、Redis主从复制"><a href="#6、Redis主从复制" class="headerlink" title="6、Redis主从复制"></a>6、Redis主从复制</h3><h4 id="Redis-主从复制的过程："><a href="#Redis-主从复制的过程：" class="headerlink" title="Redis 主从复制的过程："></a>Redis 主从复制的过程：</h4><ol>
 <li>Slave 与 Master 建立连接，发送 psync 同步命令。</li>
 <li>Master 会启动一个后台进程，将数据库快照保存到文件中，同时 Master 主进程会开始收集新的写命令并缓存。</li>
 <li>后台完成保存后，就将此文件发送给 Slave。</li>
 <li>Slave 将此文件保存到磁盘上。</li>
 </ol>
-<p>Redis 主从复制特点：</p>
-<ol>
+<h4 id="Redis-主从复制特点："><a href="#Redis-主从复制特点：" class="headerlink" title="Redis 主从复制特点："></a>Redis 主从复制特点：</h4><ol>
 <li>可以拥有多个 Slave。</li>
 <li>多个 Slave 可以连接同一个 Master 外，还可以连接到其它的 Slave。（当 Master 宕机后，相连的 Slave 转变为 Master）。</li>
 <li>主从复制不会阻塞 Master，在同步数据时， Master 可以继续处理 Client 请求。</li>
@@ -440,7 +432,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、什么是Redis"><span class="toc-number">1.</span> <span class="toc-text">1、什么是Redis</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、Redis安装"><span class="toc-number">2.</span> <span class="toc-text">2、Redis安装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、Redis的优点"><span class="toc-number">3.</span> <span class="toc-text">3、Redis的优点</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、常用命令"><span class="toc-number">4.</span> <span class="toc-text">4、常用命令</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#exists-and-del"><span class="toc-number">5.</span> <span class="toc-text">exists   and   del</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#type-and-keys"><span class="toc-number">6.</span> <span class="toc-text">type   and   keys</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#randomkey-and-clear"><span class="toc-number">7.</span> <span class="toc-text">randomkey    and   clear</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rename-and-renamex"><span class="toc-number">8.</span> <span class="toc-text">rename   and   renamex</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dbsize"><span class="toc-number">9.</span> <span class="toc-text">dbsize</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、Redis时间相关命令"><span class="toc-number">10.</span> <span class="toc-text">5、Redis时间相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#限定-key-生存时间"><span class="toc-number">10.1.</span> <span class="toc-text">限定 key 生存时间</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查询-key-剩余生存时间"><span class="toc-number">10.2.</span> <span class="toc-text">查询 key 剩余生存时间</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#清除-key"><span class="toc-number">10.3.</span> <span class="toc-text">清除 key</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、Redis主从复制"><span class="toc-number">11.</span> <span class="toc-text">6、Redis主从复制</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、什么是Redis"><span class="toc-number">1.</span> <span class="toc-text">1、什么是Redis</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Redis安装"><span class="toc-number">2.</span> <span class="toc-text">2、Redis安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#下载"><span class="toc-number">2.1.</span> <span class="toc-text">下载</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#解压"><span class="toc-number">2.2.</span> <span class="toc-text">解压</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#编译"><span class="toc-number">2.3.</span> <span class="toc-text">编译</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看重要文件-ls"><span class="toc-number">2.4.</span> <span class="toc-text">查看重要文件    ls</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#配置环境变量"><span class="toc-number">2.5.</span> <span class="toc-text">配置环境变量</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#启动"><span class="toc-number">2.6.</span> <span class="toc-text">启动</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、Redis的优点"><span class="toc-number">3.</span> <span class="toc-text">3、Redis的优点</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、常用命令"><span class="toc-number">4.</span> <span class="toc-text">4、常用命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#exists-and-del"><span class="toc-number">4.1.</span> <span class="toc-text">exists   and   del</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#type-and-keys"><span class="toc-number">4.2.</span> <span class="toc-text">type   and   keys</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#randomkey-and-clear"><span class="toc-number">4.3.</span> <span class="toc-text">randomkey    and   clear</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#rename-and-renamex"><span class="toc-number">4.4.</span> <span class="toc-text">rename   and   renamex</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#dbsize"><span class="toc-number">4.5.</span> <span class="toc-text">dbsize</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5、Redis时间相关命令"><span class="toc-number">5.</span> <span class="toc-text">5、Redis时间相关命令</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#限定-key-生存时间"><span class="toc-number">5.1.</span> <span class="toc-text">限定 key 生存时间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查询-key-剩余生存时间"><span class="toc-number">5.2.</span> <span class="toc-text">查询 key 剩余生存时间</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#清除-key"><span class="toc-number">5.3.</span> <span class="toc-text">清除 key</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6、Redis主从复制"><span class="toc-number">6.</span> <span class="toc-text">6、Redis主从复制</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#Redis-主从复制的过程："><span class="toc-number">6.1.</span> <span class="toc-text">Redis 主从复制的过程：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#Redis-主从复制特点："><span class="toc-number">6.2.</span> <span class="toc-text">Redis 主从复制特点：</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -557,15 +549,15 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Python3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">MongoDB</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color2">CentOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Python3</a>
               </li>
              
               <li class="article-tag-list-item">

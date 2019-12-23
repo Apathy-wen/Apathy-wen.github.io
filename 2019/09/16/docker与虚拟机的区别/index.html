@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>MongoDB基础操作 | Apathy-wen</title>
+  <title>docker与虚拟机的区别 | Apathy-wen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1、虚拟机开机配置1sudo   service   mongodb   start">
-<meta name="keywords" content="MongoDB">
+  <meta name="description" content="本质区别 VM(VMware)  在宿主机器、宿主机器操作系统的基础上创建虚拟层、虚拟化的操作系统、虚拟化的仓库，然后再安装应用。 Linux 容器不是模拟一个完整的操作系统，而是对进程进行隔离，相当于是在正常进程的外面套了一个保护层 。   Container(Docker容器)  在宿主机器、宿主机器操作系统上创建Docker引擎，在引擎的基础上再安装应用。  对于容器里面的进程来说，它接触到">
+<meta name="keywords" content="docker,虚拟机">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MongoDB基础操作">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;20&#x2F;MongoDB&#x2F;index.html">
+<meta property="og:title" content="docker与虚拟机的区别">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;09&#x2F;16&#x2F;docker%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%8C%BA%E5%88%AB&#x2F;index.html">
 <meta property="og:site_name" content="Apathy-wen">
-<meta property="og:description" content="1、虚拟机开机配置1sudo   service   mongodb   start">
+<meta property="og:description" content="本质区别 VM(VMware)  在宿主机器、宿主机器操作系统的基础上创建虚拟层、虚拟化的操作系统、虚拟化的仓库，然后再安装应用。 Linux 容器不是模拟一个完整的操作系统，而是对进程进行隔离，相当于是在正常进程的外面套了一个保护层 。   Container(Docker容器)  在宿主机器、宿主机器操作系统上创建Docker引擎，在引擎的基础上再安装应用。  对于容器里面的进程来说，它接触到">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-21T00:54:09.667Z">
+<meta property="og:updated_time" content="2019-12-23T11:59:38.279Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Apathy-wen" type="application/atom+xml">
@@ -153,83 +153,85 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MongoDB" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-docker与虚拟机的区别" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      MongoDB基础操作
+      docker与虚拟机的区别
     </h1>
   
 
         
-        <a href="/2019/11/20/MongoDB/" class="archive-article-date">
-  	<time datetime="2019-11-20T13:05:45.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-11-20</time>
+        <a href="/2019/09/16/docker%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
+  	<time datetime="2019-09-16T01:16:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h4 id="1、虚拟机开机配置"><a href="#1、虚拟机开机配置" class="headerlink" title="1、虚拟机开机配置"></a>1、虚拟机开机配置</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo   service   mongodb   start</span><br></pre></td></tr></table></figure>
-
- <a id="more"></a> 
-
-<h4 id="2、创建、销毁数据库"><a href="#2、创建、销毁数据库" class="headerlink" title="2、创建、销毁数据库"></a>2、创建、销毁数据库</h4><ul>
-<li><h5 id="启动服务，进入MongoDB"><a href="#启动服务，进入MongoDB" class="headerlink" title="启动服务，进入MongoDB"></a>启动服务，进入MongoDB</h5></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mongo</span><br></pre></td></tr></table></figure>
-
+        <h3 id="本质区别"><a href="#本质区别" class="headerlink" title="本质区别"></a>本质区别</h3><ul>
+<li><p>VM(VMware)</p>
 <ul>
-<li><h5 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h5></li>
+<li>在宿主机器、宿主机器操作系统的基础上创建虚拟层、虚拟化的操作系统、虚拟化的仓库，然后再安装应用。</li>
+<li><code>Linux</code> 容器不是模拟一个完整的操作系统，而是对进程进行隔离，相当于是在正常进程的外面套了一个保护层 。</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">use   数据库名</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h5 id="查看当前连接的数据库"><a href="#查看当前连接的数据库" class="headerlink" title="查看当前连接的数据库"></a>查看当前连接的数据库</h5></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h5 id="查看所有数据库"><a href="#查看所有数据库" class="headerlink" title="查看所有数据库"></a>查看所有数据库</h5></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show   dbs</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h5 id="销毁数据库"><a href="#销毁数据库" class="headerlink" title="销毁数据库"></a>销毁数据库</h5></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.dropDatabase()</span><br></pre></td></tr></table></figure>
-
-<h4 id="3、创建、删除集合"><a href="#3、创建、删除集合" class="headerlink" title="3、创建、删除集合"></a>3、创建、删除集合</h4><ul>
-<li><h5 id="创建集合"><a href="#创建集合" class="headerlink" title="创建集合"></a>创建集合</h5></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.createCollection(&quot;集合名&quot;)</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h5 id="查看创建的集合"><a href="#查看创建的集合" class="headerlink" title="查看创建的集合"></a>查看创建的集合</h5></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show   collections</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><h5 id="删除集合"><a href="#删除集合" class="headerlink" title="删除集合"></a>删除集合</h5></li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.集合名.drop()</span><br></pre></td></tr></table></figure>
-
-<h4 id="4、集合增、删、改、查数据"><a href="#4、集合增、删、改、查数据" class="headerlink" title="4、集合增、删、改、查数据"></a>4、集合增、删、改、查数据</h4><ul>
-<li><h5 id="插入文档"><a href="#插入文档" class="headerlink" title="插入文档"></a>插入文档</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.COLLECTION_NAME.insert(document)</span><br></pre></td></tr></table></figure>
 </li>
-<li><h5 id="更新文档"><a href="#更新文档" class="headerlink" title="更新文档"></a>更新文档</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.COLLECTION_NAME.update(SELECTION_CRITERIA,UPDATED_DATA)</span><br></pre></td></tr></table></figure>
+<li><p>Container(Docker容器)</p>
+<ul>
+<li><p>在宿主机器、宿主机器操作系统上创建Docker引擎，在引擎的基础上再安装应用。</p>
 </li>
-<li><h5 id="替换已存在的文档"><a href="#替换已存在的文档" class="headerlink" title="替换已存在的文档"></a>替换已存在的文档</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.COLLECTION_NAME.save(&#123;_id:ObjectId(),NEW_DATA&#125;)</span><br></pre></td></tr></table></figure>
-</li>
-<li><h5 id="删除文档"><a href="#删除文档" class="headerlink" title="删除文档"></a>删除文档</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.COLLECTION_NAME.remove(DELECTION_CRITERIA)</span><br></pre></td></tr></table></figure>
-</li>
-<li><h5 id="查询语句"><a href="#查询语句" class="headerlink" title="查询语句"></a>查询语句</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">db.COLLECTION_NAME.find(Parameter)</span><br></pre></td></tr></table></figure>
+<li><p>对于容器里面的进程来说，它接触到的各种资源都是虚拟的，从而实现与底层系统的隔离。 </p>
+<a id="more"></a> 
 
 </li>
 </ul>
+</li>
+</ul>
+<h3 id="Docker的优势"><a href="#Docker的优势" class="headerlink" title="Docker的优势"></a>Docker的优势</h3><p><strong>Docker相比于传统虚拟化方式具有更多的优势：</strong></p>
+<ul>
+<li><code>docker</code> 启动快速属于秒级别。虚拟机通常需要几分钟去启动</li>
+<li><code>docker</code> 需要的资源更少， <code>docker</code> 在操作系统级别进行虚拟化， <code>docker</code> 容器和内核交互，几乎没有性能损耗，性能优于通过 <code>Hypervisor</code> 层与内核层的虚拟化</li>
+<li><code>docker</code> 更轻量， <code>docker</code> 的架构可以共用一个内核与共享应用程序库，所占内存极小。同样的硬件环境， <code>Docker</code> 运行的镜像数远多于虚拟机数量，对系统的利用率非常高</li>
+<li>与虚拟机相比， <code>docker</code> 隔离性更弱， <code>docker</code> 属于进程之间的隔离，虚拟机可实现系统级别隔离</li>
+<li>安全性： <code>docker</code> 的安全性也更弱。 <code>Docker</code> 的租户 <code>root</code> 和宿主机 <code>root</code> 等同，一旦容器内的用户从普通用户权限提升为root权限，它就直接具备了宿主机的root权限，进而可进行无限制的操作。虚拟机租户 <code>root</code> 权限和宿主机的 <code>root</code> 虚拟机权限是分离的，并且虚拟机利用如 <code>Intel</code> 的 <code>VT-d</code> 和 <code>VT-x</code> 的 <code>ring-1</code> 硬件隔离技术，这种隔离技术可以防止虚拟机突破和彼此交互，而容器至今还没有任何形式的硬件隔离，这使得容器容易受到攻击</li>
+<li>可管理性： <code>docker</code> 的集中化管理工具还不算成熟。各种虚拟化技术都有成熟的管理工具，例如 <code>VMware vCenter</code> 提供完备的虚拟机管理能力</li>
+<li>高可用和可恢复性： <code>docker</code> 对业务的高可用支持是通过快速重新部署实现的。虚拟化具备负载均衡，高可用，容错，迁移和数据保护等经过生产实践检验的成熟保障机制， <code>VMware</code> 可承诺虚拟机 <code>99.999%</code> 高可用，保证业务连续性</li>
+<li>快速创建、删除：虚拟化创建是分钟级别的， <code>Docker</code> 容器创建是秒级别的， <code>Docker</code> 的快速迭代性，决定了无论是开发、测试、部署都可以节约大量时间</li>
+<li>交付、部署：虚拟机可以通过镜像实现环境交付的一致性，但镜像分发无法体系化。 <code>Docker</code> 在 <code>Dockerfile</code> 中记录了容器构建过程，可在集群中实现快速分发和快速部署</li>
+</ul>
+<h3 id="对比传统虚拟机总结"><a href="#对比传统虚拟机总结" class="headerlink" title="对比传统虚拟机总结"></a>对比传统虚拟机总结</h3><table>
+<thead>
+<tr>
+<th align="left">特性</th>
+<th align="left">容器</th>
+<th align="left">虚拟机</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">启动</td>
+<td align="left">秒级</td>
+<td align="left">分钟级</td>
+</tr>
+<tr>
+<td align="left">硬盘使用</td>
+<td align="left">一般为 <code>MB</code></td>
+<td align="left">一般为 <code>GB</code></td>
+</tr>
+<tr>
+<td align="left">性能</td>
+<td align="left">接近原生</td>
+<td align="left">弱于</td>
+</tr>
+<tr>
+<td align="left">系统支持量</td>
+<td align="left">单机支持上千个容器</td>
+<td align="left">一般几十个</td>
+</tr>
+</tbody></table>
 
       
 
@@ -269,7 +271,11 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color3">MongoDB</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">docker</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">虚拟机</a>
         		</li>
       		
 		</ul>
@@ -325,7 +331,7 @@
     <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=	http://yoursite.com/2019/11/20/MongoDB/" alt="微信分享二维码">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=	http://yoursite.com/2019/09/16/docker%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%8C%BA%E5%88%AB/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -339,9 +345,18 @@
   
 <nav id="article-nav">
   
+    <a href="/2019/11/11/Redis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Redis
+        
+      </div>
+    </a>
   
-    <a href="/2019/11/11/Redis/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Redis</div>
+  
+    <a href="/2019/08/09/Linux/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Linux下Python3源码安装</div>
       <i class="icon-circle-right"></i>
     </a>
 	<span id="busuanzi_container_page_pv">
@@ -371,7 +386,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、虚拟机开机配置"><span class="toc-number">1.</span> <span class="toc-text">1、虚拟机开机配置</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、创建、销毁数据库"><span class="toc-number">2.</span> <span class="toc-text">2、创建、销毁数据库</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#启动服务，进入MongoDB"><span class="toc-number">2.1.</span> <span class="toc-text">启动服务，进入MongoDB</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#创建数据库"><span class="toc-number">2.2.</span> <span class="toc-text">创建数据库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查看当前连接的数据库"><span class="toc-number">2.3.</span> <span class="toc-text">查看当前连接的数据库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查看所有数据库"><span class="toc-number">2.4.</span> <span class="toc-text">查看所有数据库</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#销毁数据库"><span class="toc-number">2.5.</span> <span class="toc-text">销毁数据库</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、创建、删除集合"><span class="toc-number">3.</span> <span class="toc-text">3、创建、删除集合</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#创建集合"><span class="toc-number">3.1.</span> <span class="toc-text">创建集合</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查看创建的集合"><span class="toc-number">3.2.</span> <span class="toc-text">查看创建的集合</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#删除集合"><span class="toc-number">3.3.</span> <span class="toc-text">删除集合</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、集合增、删、改、查数据"><span class="toc-number">4.</span> <span class="toc-text">4、集合增、删、改、查数据</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#插入文档"><span class="toc-number">4.1.</span> <span class="toc-text">插入文档</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#更新文档"><span class="toc-number">4.2.</span> <span class="toc-text">更新文档</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#替换已存在的文档"><span class="toc-number">4.3.</span> <span class="toc-text">替换已存在的文档</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#删除文档"><span class="toc-number">4.4.</span> <span class="toc-text">删除文档</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#查询语句"><span class="toc-number">4.5.</span> <span class="toc-text">查询语句</span></a></li></ol></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#本质区别"><span class="toc-number">1.</span> <span class="toc-text">本质区别</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Docker的优势"><span class="toc-number">2.</span> <span class="toc-text">Docker的优势</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#对比传统虚拟机总结"><span class="toc-number">3.</span> <span class="toc-text">对比传统虚拟机总结</span></a></li></ol>
                     </div>
                 </span>
             </div>

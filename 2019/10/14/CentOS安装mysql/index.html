@@ -6,17 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Tag: docker | Apathy-wen</title>
+  <title>CentOS安装MySQL | Apathy-wen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="愈是运气不好，愈要沉住气默默振作，静静熬过去，切勿扰攘，制造笑柄，留下后患。">
-<meta name="keywords" content="努力">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Apathy-wen">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;tags&#x2F;docker&#x2F;index.html">
+  <meta name="description" content="1 、下载并安装MySQL官方的 Yum Repository1[root@localhost ~]# wget -i -c http:&#x2F;&#x2F;dev.mysql.com&#x2F;get&#x2F;mysql57-community-release-el7-10.noarch.rpm   使用上面的命令就直接下载了安装用的Yum Repository，大概25KB的样子，然后就可以直接yum安装了。">
+<meta name="keywords" content="Linux,CentOS,MySQL">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CentOS安装MySQL">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;14&#x2F;CentOS%E5%AE%89%E8%A3%85mysql&#x2F;index.html">
 <meta property="og:site_name" content="Apathy-wen">
-<meta property="og:description" content="愈是运气不好，愈要沉住气默默振作，静静熬过去，切勿扰攘，制造笑柄，留下后患。">
+<meta property="og:description" content="1 、下载并安装MySQL官方的 Yum Repository1[root@localhost ~]# wget -i -c http:&#x2F;&#x2F;dev.mysql.com&#x2F;get&#x2F;mysql57-community-release-el7-10.noarch.rpm   使用上面的命令就直接下载了安装用的Yum Repository，大概25KB的样子，然后就可以直接yum安装了。">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https:&#x2F;&#x2F;images2017.cnblogs.com&#x2F;blog&#x2F;1079354&#x2F;201707&#x2F;1079354-20170726201927328-459165254.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;images2017.cnblogs.com&#x2F;blog&#x2F;1079354&#x2F;201707&#x2F;1079354-20170726202441687-1168874203.png">
+<meta property="og:image" content="https:&#x2F;&#x2F;images2017.cnblogs.com&#x2F;blog&#x2F;1079354&#x2F;201707&#x2F;1079354-20170726202722796-1932560887.png">
+<meta property="og:updated_time" content="2019-12-24T12:50:22.464Z">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https:&#x2F;&#x2F;images2017.cnblogs.com&#x2F;blog&#x2F;1079354&#x2F;201707&#x2F;1079354-20170726201927328-459165254.png">
   
     <link rel="alternative" href="/atom.xml" title="Apathy-wen" type="application/atom+xml">
   
@@ -152,64 +157,267 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-CentOS安装mysql" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/09/16/docker%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%8C%BA%E5%88%AB/" class="archive-article-date">
-  	<time datetime="2019-09-16T01:16:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-09-16</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/09/16/docker%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%8C%BA%E5%88%AB/">docker与虚拟机的区别</a>
+    <h1 class="article-title" itemprop="name">
+      CentOS安装MySQL
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/10/14/CentOS%E5%AE%89%E8%A3%85mysql/" class="archive-article-date">
+  	<time datetime="2019-10-14T02:14:55.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-14</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-、下载并安装MySQL官方的-Yum-Repository"><a href="#1-、下载并安装MySQL官方的-Yum-Repository" class="headerlink" title="1 、下载并安装MySQL官方的 Yum Repository"></a>1 、下载并安装MySQL官方的 Yum Repository</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# wget -i -c http://dev.mysql.com/get/mysql57-community-release-el7-10.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p> 使用上面的命令就直接下载了安装用的Yum Repository，大概25KB的样子，然后就可以直接yum安装了。</p>
+<a id="more"></a> 
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum -y install mysql57-community-release-el7-10.noarch.rpm</span><br></pre></td></tr></table></figure>
+
+<p> 之后就开始安装MySQL服务器。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum -y install mysql-community-server</span><br></pre></td></tr></table></figure>
+
+<p> 这步可能会花些时间，安装完成后就会覆盖掉之前的mariadb。</p>
+<p><img src="https://images2017.cnblogs.com/blog/1079354/201707/1079354-20170726201927328-459165254.png" alt="img"></p>
+<p>至此MySQL就安装完成了，然后是对MySQL的一些设置。</p>
+<h3 id="2、-MySQL数据库设置"><a href="#2、-MySQL数据库设置" class="headerlink" title="2、 MySQL数据库设置"></a>2、 MySQL数据库设置</h3><ul>
+<li><h4 id="首先启动MySQL"><a href="#首先启动MySQL" class="headerlink" title="首先启动MySQL"></a>首先启动MySQL</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# systemctl start  mysqld.service</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="查看MySQL运行状态，运行状态如图："><a href="#查看MySQL运行状态，运行状态如图：" class="headerlink" title="查看MySQL运行状态，运行状态如图："></a>查看MySQL运行状态，运行状态如图：</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# systemctl status mysqld.service</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://images2017.cnblogs.com/blog/1079354/201707/1079354-20170726202441687-1168874203.png" alt="img"></p>
+<p> 此时MySQL已经开始正常运行，不过要想进入MySQL还得先找出此时root用户的密码，通过如下命令可以在日志文件中找出密码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# grep &quot;password&quot; /var/log/mysqld.log</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://images2017.cnblogs.com/blog/1079354/201707/1079354-20170726202722796-1932560887.png" alt="img"></p>
+<ul>
+<li><h4 id="进入数据库"><a href="#进入数据库" class="headerlink" title="进入数据库"></a>进入数据库</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# mysql -uroot -p</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="输入初始密码，此时不能做任何事情，因为MySQL默认必须修改密码之后才能操作数据库"><a href="#输入初始密码，此时不能做任何事情，因为MySQL默认必须修改密码之后才能操作数据库" class="headerlink" title="输入初始密码，此时不能做任何事情，因为MySQL默认必须修改密码之后才能操作数据库"></a>输入初始密码，此时不能做任何事情，因为MySQL默认必须修改密码之后才能操作数据库</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; set global validate_password_policy=0;</span><br><span class="line">mysql&gt; set global validate_password_length=1;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="修改密码"><a href="#修改密码" class="headerlink" title="修改密码"></a>修改密码</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; ALTER USER &apos;root&apos;@&apos;localhost&apos; IDENTIFIED BY &apos;new password&apos;;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="MySQL完整的初始密码规则可以通过如下命令查看："><a href="#MySQL完整的初始密码规则可以通过如下命令查看：" class="headerlink" title="MySQL完整的初始密码规则可以通过如下命令查看："></a>MySQL完整的初始密码规则可以通过如下命令查看：</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SHOW VARIABLES LIKE &apos;validate_password%&apos;;</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| Variable_name                        | Value |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">| validate_password_check_user_name    | OFF   |</span><br><span class="line">| validate_password_dictionary_file    |       |</span><br><span class="line">| validate_password_length             | 4     |</span><br><span class="line">| validate_password_mixed_case_count   | 1     |</span><br><span class="line">| validate_password_number_count       | 1     |</span><br><span class="line">| validate_password_policy             | LOW   |</span><br><span class="line">| validate_password_special_char_count | 1     |</span><br><span class="line">+--------------------------------------+-------+</span><br><span class="line">7 rows in set (0.01 sec)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="关闭MySQL"><a href="#关闭MySQL" class="headerlink" title="关闭MySQL"></a>关闭MySQL</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl stop mysqld</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><h4 id="重启MySQL"><a href="#重启MySQL" class="headerlink" title="重启MySQL"></a>重启MySQL</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">systemctl restart mysqld</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="查看版本"><a href="#查看版本" class="headerlink" title="查看版本"></a>查看版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select version();</span><br></pre></td></tr></table></figure>
+</li>
+<li><h4 id="但此时还有一个问题，就是因为安装了Yum-Repository，以后每次yum操作都会自动更新，需要把这个卸载掉："><a href="#但此时还有一个问题，就是因为安装了Yum-Repository，以后每次yum操作都会自动更新，需要把这个卸载掉：" class="headerlink" title="但此时还有一个问题，就是因为安装了Yum Repository，以后每次yum操作都会自动更新，需要把这个卸载掉："></a>但此时还有一个问题，就是因为安装了Yum Repository，以后每次yum操作都会自动更新，需要把这个卸载掉：</h4></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@localhost ~]# yum -y remove mysql57-community-release-el7-10.noarch</span><br></pre></td></tr></table></figure>
+
+<p> 此时才算真的完成了。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" target="_blank" rel="noopener" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/assets/WeChat.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">docker</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">Linux</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color4">虚拟机</a>
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color2">CentOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag article-tag-list-link color1">MySQL</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" target="_blank" rel="noopener" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" target="_blank" rel="noopener" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" target="_blank" rel="noopener" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;" target="_blank" rel="noopener"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=	http://yoursite.com/2019/10/14/CentOS%E5%AE%89%E8%A3%85mysql/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/11/11/Redis/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Redis
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2019/09/16/docker%E4%B8%8E%E8%99%9A%E6%8B%9F%E6%9C%BA%E7%9A%84%E5%8C%BA%E5%88%AB/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">docker与虚拟机的区别</div>
+      <i class="icon-circle-right"></i>
+    </a>
+	<span id="busuanzi_container_page_pv">
+			本文阅读量: <span id="busuanzi_value_page_pv"></span>次
+	</span>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-、下载并安装MySQL官方的-Yum-Repository"><span class="toc-number">1.</span> <span class="toc-text">1 、下载并安装MySQL官方的 Yum Repository</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、-MySQL数据库设置"><span class="toc-number">2.</span> <span class="toc-text">2、 MySQL数据库设置</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#首先启动MySQL"><span class="toc-number">2.1.</span> <span class="toc-text">首先启动MySQL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看MySQL运行状态，运行状态如图："><span class="toc-number">2.2.</span> <span class="toc-text">查看MySQL运行状态，运行状态如图：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#进入数据库"><span class="toc-number">2.3.</span> <span class="toc-text">进入数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#输入初始密码，此时不能做任何事情，因为MySQL默认必须修改密码之后才能操作数据库"><span class="toc-number">2.4.</span> <span class="toc-text">输入初始密码，此时不能做任何事情，因为MySQL默认必须修改密码之后才能操作数据库</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#修改密码"><span class="toc-number">2.5.</span> <span class="toc-text">修改密码</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#MySQL完整的初始密码规则可以通过如下命令查看："><span class="toc-number">2.6.</span> <span class="toc-text">MySQL完整的初始密码规则可以通过如下命令查看：</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#关闭MySQL"><span class="toc-number">2.7.</span> <span class="toc-text">关闭MySQL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#重启MySQL"><span class="toc-number">2.8.</span> <span class="toc-text">重启MySQL</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#查看版本"><span class="toc-number">2.9.</span> <span class="toc-text">查看版本</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#但此时还有一个问题，就是因为安装了Yum-Repository，以后每次yum操作都会自动更新，需要把这个卸载掉："><span class="toc-number">2.10.</span> <span class="toc-text">但此时还有一个问题，就是因为安装了Yum Repository，以后每次yum操作都会自动更新，需要把这个卸载掉：</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
+        </div>
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -238,9 +446,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,

@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://yoursite.com">
   <title>Gunicorn简介 | Apathy-wen</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="愈是运气不好，愈要沉住气默默振作，静静熬过去，切勿扰攘，制造笑柄，留下后患。">
+  <meta name="description" content="1、什么是Gunicorn Gunicorn Green Unicorn（绿色独角兽）是一个用于 UNIX 的 Python WSGI HTTP 服务器。它是一个前叉工作者模型，从 Ruby 的 Unicorn 项目移植而来。 Gunicorn 服务器与许多 Web 框架广泛兼容，简单实现，轻松服务器资源并且速度相当快。">
 <meta name="keywords" content="Gunicorn">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Gunicorn简介">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;25&#x2F;Gunicorn&#x2F;index.html">
 <meta property="og:site_name" content="Apathy-wen">
-<meta property="og:description" content="愈是运气不好，愈要沉住气默默振作，静静熬过去，切勿扰攘，制造笑柄，留下后患。">
+<meta property="og:description" content="1、什么是Gunicorn Gunicorn Green Unicorn（绿色独角兽）是一个用于 UNIX 的 Python WSGI HTTP 服务器。它是一个前叉工作者模型，从 Ruby 的 Unicorn 项目移植而来。 Gunicorn 服务器与许多 Web 框架广泛兼容，简单实现，轻松服务器资源并且速度相当快。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-12-26T08:19:36.850Z">
+<meta property="og:updated_time" content="2019-12-26T08:52:54.061Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Apathy-wen" type="application/atom+xml">
@@ -173,7 +173,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="1、什么是Gunicorn"><a href="#1、什么是Gunicorn" class="headerlink" title="1、什么是Gunicorn"></a>1、什么是Gunicorn</h3><p> Gunicorn <a href="https://www.leiue.com/tags/green-unicorn" target="_blank" rel="noopener">Green Unicorn</a>（绿色独角兽）是一个用于 UNIX 的 <a href="https://www.leiue.com/tags/python" target="_blank" rel="noopener">Python</a> WSGI <a href="https://www.leiue.com/tags/http" target="_blank" rel="noopener">HTTP</a> 服务器。它是一个前叉工作者模型，从 Ruby 的 Unicorn 项目移植而来。 Gunicorn 服务器与许多 Web 框架广泛兼容，简单实现，轻松服务器资源并且速度相当快。 </p>
+ <a id="more"></a> 
+
+<h3 id="2、Gunicorn功能"><a href="#2、Gunicorn功能" class="headerlink" title="2、Gunicorn功能"></a>2、Gunicorn功能</h3><h4 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h4><ul>
+<li>本机支持 WSGI，web2py，Django 和 Paster</li>
+<li>自动化工作流程管理</li>
+<li>简单的 Python 配置</li>
+<li>多个工人配置</li>
+<li>各种服务器挂钩，可扩展性</li>
+<li>兼容 Python 2.6+和 Python 3.2+</li>
+</ul>
+<p>Gunicorn 是一个 unix 上被广泛使用的高性能的 Python WSGI UNIX HTTP Server。和大多数的 web 框架兼容，并具有实现简单，轻量级，高性能等特点。</p>
+<p>Gunicorn 服务器作为 wsgi app 的容器，能够与各种 Web 框架兼容（flask，django 等）,得益于 gevent 等技术，使用 Gunicorn 能够在基本不改变 wsgi app 代码的前提下，大幅度提高 wsgi app 的性能。</p>
+<h5 id="详情参考gunicorn官网-https-docs-gunicorn-org-en-latest-index-html"><a href="#详情参考gunicorn官网-https-docs-gunicorn-org-en-latest-index-html" class="headerlink" title="详情参考gunicorn官网 https://docs.gunicorn.org/en/latest/index.html"></a>详情参考gunicorn官网 <a href="https://docs.gunicorn.org/en/latest/index.html" target="_blank" rel="noopener">https://docs.gunicorn.org/en/latest/index.html</a></h5>
       
 
       
@@ -323,7 +336,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    目录，不存在的…
+                    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、什么是Gunicorn"><span class="toc-number">1.</span> <span class="toc-text">1、什么是Gunicorn</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、Gunicorn功能"><span class="toc-number">2.</span> <span class="toc-text">2、Gunicorn功能</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#功能"><span class="toc-number">2.1.</span> <span class="toc-text">功能</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#详情参考gunicorn官网-https-docs-gunicorn-org-en-latest-index-html"><span class="toc-number">2.1.1.</span> <span class="toc-text">详情参考gunicorn官网 https://docs.gunicorn.org/en/latest/index.html</span></a></li></ol></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -448,11 +461,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">MySQL</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">Gunicorn</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Python3</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">Nginx</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">MySQL</a>
+                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">redis</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -461,18 +486,6 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">虚拟机</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color3">Python3</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color1">redis</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" target="_blank" rel="noopener" class="js-tag color4">Gunicorn</a>
               </li>
             
             <div class="clearfix"></div>
